@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Skill Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skill Verification System</h1>
+
+        <!-- Section for user to log in -->
+        <div class="card">
+            <h2>Login</h2>
+            <button onclick="connectToMetamask()">Login with MetaMask</button>
+            <p id="userAccountDisplay">Not logged in</p>
+        </div>
+
+        <!-- Section for adding employees (open to any authorized user) -->
+        <div class="card">
+            <h2>Add Employee</h2>
+            <input type="text" id="employeeName" placeholder="Employee Name">
+            <input type="number" id="overallRating" placeholder="Overall Rating (1-10)">
+            <button onclick="requestAddEmployee()">Send Request</button>
+        </div>
+
+        <!-- Section for adding certification (only for logged-in users) -->
+        <div class="card">
+            <h2>Add Certification</h2>
+            <!-- No employee address input as the logged-in user will be used -->
+            <input type="text" id="certificationName" placeholder="Certification Name">
+            <input type="file" id="certificationFile">
+            <button onclick="addCertification()">Add Certification</button>
+        </div>
+
+        <!-- Section for verifying certification -->
+        <div class="card">
+            <h2>Verify Certification</h2>
+            <input type="text" id="certificationEmployeeAddress" placeholder="Employee Address">
+            <input type="text" id="certificationHash" placeholder="Certification Hash">
+         
+            <button onclick="verifyCertification()">Verify Certification</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@50.1.2/dist/index.min.js"></script>
+    <script src="app.js" defer></script>
+</body>
+</html>
