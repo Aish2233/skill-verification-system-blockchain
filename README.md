@@ -53,10 +53,3 @@ To run the Skill Verification System locally, follow these steps:
 
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-- Inspired by the need for secure skill verification systems.
-- Developed with the help of community resources and tutorials on blockchain technology.
